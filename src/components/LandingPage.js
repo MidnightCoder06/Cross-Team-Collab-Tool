@@ -1,6 +1,6 @@
-import Navbar from './Navbar';
-import TaskPost from './TaskPost';
-import './LandingPage.css';
+import Navbar from '../Navbar';
+import TaskPost from '../TaskPost';
+import '../styles/LandingPage.css';
 
 const LandingPage = () => {
     return (
