@@ -1,14 +1,10 @@
-import Navbar from './Navbar';
-import TaskPost from './TaskPost';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import LandingPage from './LandingPage';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <TaskPost />
-    </div>
-  );
-}
+const App = ()  => (
+  <Router>
+    <Route exact path="/" component={LandingPage} />
+  </Router>
+);
 
 export default App;

@@ -1,9 +1,10 @@
-Components Needed
+Components 
 
 Navbar.js
-    -contribution / repo link 
-    -bug report link
-    -Sorting (dropdown menu)
+    -link to contribution guide / repo 
+    -link bug report form
+    -link to task creation form
+    -sorting (dropdown menu)
         -priority
         -date posted
 TaskPost.js (card)
