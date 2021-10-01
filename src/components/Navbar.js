@@ -6,7 +6,7 @@ const Navbar = () => {
             <div class="child"> Purpose </div>
             <div class="child"> Sort </div>
             <div class="child"> Create a task </div>
-            <div class="child"> Contribute </div>
+            <a href="https://github.com/MidnightCoder06/Cross-Team-Collab-Tool"><div class="child"> Contribute </div></a>
             <div class="child"> File a bug </div>
         </div>
     );
