@@ -1,10 +1,10 @@
 import Navbar from './Navbar';
 import TaskPost from './TaskPost';
-import './App.css';
+import './LandingPage.css';
 
 const LandingPage = () => {
     return (
-        <div className="App">
+        <div className="LandingPage">
             <Navbar />
         </div>
     );
