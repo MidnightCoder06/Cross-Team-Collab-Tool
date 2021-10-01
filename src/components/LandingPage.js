@@ -1,4 +1,4 @@
-import Navbar from '../Navbar';
+import Navbar from './Navbar';
 import TaskPost from '../TaskPost';
 import '../styles/LandingPage.css';
 
