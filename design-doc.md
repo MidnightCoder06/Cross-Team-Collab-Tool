@@ -15,9 +15,6 @@ TaskPost.js (card)
     -urgency level
 BugReportForm.js
    
-
-
 Systems Needed
-    - news feed
+    - news feed w/ pagination 
     - sorting algorithm
-    - priority queue 

@@ -1,11 +1,15 @@
 import '../styles/Navbar.css'
+import '../styles/SameLineDivs.css'
 import { useHistory } from 'react-router-dom';
 
 /* create dropdown menu next
     https://www.youtube.com/watch?v=IF6k0uZuypA&t=110s
     https://www.youtube.com/watch?v=mN3P_rv8ad4
     https://www.youtube.com/watch?v=t8JK5bVoVBw
+*/
 
+/*
+Also look up videos on how to make a fancy navbar 
 */
 
 const Navbar = () => {

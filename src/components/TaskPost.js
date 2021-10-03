@@ -1,5 +1,6 @@
 import React from 'react';
 
+// individual post component. Takes all fields as props.
 const TaskPost = () => {
     return (
         <div>
