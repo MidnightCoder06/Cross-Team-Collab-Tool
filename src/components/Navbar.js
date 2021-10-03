@@ -28,7 +28,7 @@ const Navbar = () => {
     }
 
     return (
-        <div id="parent">
+        <div id="parent" className="header">
             <button className="child" id="button" onClick={handlePurposeStatementClick}> Purpose </button>
             <select name="Sort" className="child"> 
                 <option value="Priority"> Priority </option>
