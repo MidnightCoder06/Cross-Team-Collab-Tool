@@ -20,7 +20,7 @@ const Navbar = () => {
     }
 
     const handleCreateTaskClick = () => {
-        history.push('/task-creation-form');
+        history.push('/task-creation-container');
     }
 
     const handleFileBugClick = () => {

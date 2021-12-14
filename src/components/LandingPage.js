@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import TaskPost from './TaskPost';
+//import TaskPost from './TaskPost';
 import '../styles/LandingPage.css';
 
 // paginated -> news feed style 

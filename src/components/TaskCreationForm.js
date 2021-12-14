@@ -1,33 +1,75 @@
-import React from 'react';
+import React from 'react'
 
-// read some articles & watch some videos on how to make a great form
-const TaskCreationForm = () => {
-
-    const handleSubmit = () => {
-        console.log('render thank you page') // prop -> title: creating a task
-        // post request to the backend
-    }
-    return (
-        <>
-        <h2> Create Task </h2>
-        <div>
-            <p> Author: </p>
-            <p> Description </p>
-            <p> Priority Level </p>
-            <p> Engineer Type </p>
-            <p> Date Posted </p>
-            <button onClick={handleSubmit}> Submit </button>
-        </div>
-        </>
-    ) 
+const initialFormState = {
+  id: '',
+  author: '',
+  description: '',
 }
 
-export default TaskCreationForm;
+export default function TaskCreationForm(props) {
+  const {
+    values,
+    setValues,
+    postTask, 
+    putTask
+  } = props
 
-/*
--task description
-    -team that needs the help
-    -type of engineer they need
-    -date posted
-    -urgency level
-*/
+  ////////////// EVENT HANDLERS //////////////
+
+  const onCancel = evt => {
+    evt.preventDefault();
+    setValues(initialFormState);
+  }
+
+  const onSubmit = async (evt) => {
+    evt.preventDefault();
+    if(values.id === '') {
+      postTask(values);
+    } else {
+      putTask(values);
+    }
+  }
+
+  const onChange = evt => {
+    if (evt.target.name === 'description') {
+        let currState = {...values}
+        currState.description = evt.target.value
+        setValues(currState)
+        
+    } else if (evt.target.name === 'author') {
+        let currState = {...values}
+        currState.author = evt.target.value
+        setValues(currState)
+    }
+  }
+
+  ////////////// HELPER FUNCTIONS //////////////
+  const isDisabled = () => {
+    return !values.description.trim() || !values.author.trim()
+  }
+
+  return (
+    <form onSubmit={onSubmit}>
+      <h3>{values.id ? 'Edit' : 'Add New'} Task</h3>
+      <input
+        name='description'
+        type='description'
+        value={values.description}
+        onChange={onChange}
+        placeholder='Enter description'
+      />
+      <input
+        name='author'
+        type='description'
+        value={values.author}
+        onChange={onChange}
+        placeholder='Enter author'
+      />
+      <button id='submitBtn' disabled={isDisabled()}>
+        Submit {values.id ? 'Changes' : 'Task'}
+      </button>
+      <button id='cancelBtn' onClick={onCancel}>Cancel</button>
+    </form>
+  )
+}
+
