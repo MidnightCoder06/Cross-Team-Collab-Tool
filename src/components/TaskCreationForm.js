@@ -4,11 +4,12 @@ import React from 'react';
 const TaskCreationForm = () => {
 
     const handleSubmit = () => {
-        console.log('render thank you page')
+        console.log('render thank you page') // prop -> title: creating a task
+        // post request to the backend
     }
     return (
         <>
-        <div> Create Task </div>
+        <h2> Create Task </h2>
         <div>
             <p> Author: </p>
             <p> Description </p>
@@ -24,11 +25,9 @@ const TaskCreationForm = () => {
 export default TaskCreationForm;
 
 /*
-
 -task description
     -team that needs the help
     -type of engineer they need
     -date posted
     -urgency level
-
 */
