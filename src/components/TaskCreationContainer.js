@@ -5,8 +5,8 @@ const tasksURL = 'http://localhost:5000/api/tasks'
 
 const initialFormState = {
   id: '',
-  description: '',
   author: '',
+  description: '',
   priorityLevel: '',
   engineerType: ''
 }
