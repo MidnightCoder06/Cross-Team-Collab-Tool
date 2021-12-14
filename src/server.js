@@ -11,11 +11,15 @@ let tasks = [
     id: uuid(),
     author: 'Manager ABC',
     description: "Migrate to a new database",
+    priorityLevel: "high",
+    engineerType: "backend"
   },
   {
     id: uuid(),
     author: 'Manager XYZ',
     description: "Refactor frontend",
+    priorityLevel: "low",
+    engineerType: "frontend"
   }
 ]
 
@@ -24,7 +28,7 @@ function getAllTasks(req, res) {
 }
 
 function getTaskById(req, res) {
-  res.json(tasks.find(friend => friend.id === req.params.id))
+  res.json(tasks.find(task => task.id === req.params.id))
 }
 
 function postNewTask(req, res) {
@@ -34,7 +38,7 @@ function postNewTask(req, res) {
 }
 
 function deleteTaskById(req, res) {
-  tasks = tasks.filter(friend => friend.id !== req.params.id)
+  tasks = tasks.filter(task => task.id !== req.params.id)
   res.json(req.params.id)
 }
 

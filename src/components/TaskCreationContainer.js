@@ -7,6 +7,8 @@ const initialFormState = {
   id: '',
   description: '',
   author: '',
+  priorityLevel: '',
+  engineerType: ''
 }
 
 export default function Container() {
@@ -28,7 +30,7 @@ export default function Container() {
       } 
   }
 
-  const postTask = async ({ description, author }) => {
+  const postTask = async ({ author, description, priorityLevel, engineerType }) => {
     try {
       const response = await fetch(tasksURL, {
         method: 'POST',
@@ -37,7 +39,9 @@ export default function Container() {
         },
         body: JSON.stringify({
           author,
-          description
+          description,
+          priorityLevel, 
+          engineerType
         })
       });
       const data = await response.json();
@@ -49,7 +53,7 @@ export default function Container() {
     }
   }
 
-  const putTask = async ({ id, author, description }) => {
+  const putTask = async ({ id, author, description, priorityLevel, engineerType }) => {
     try {
       const response = await fetch(tasksURL + `/${id}`, {
         method: 'PUT',
@@ -59,7 +63,9 @@ export default function Container() {
         body: JSON.stringify({
           id,
           author,
-          description
+          description,
+          priorityLevel, 
+          engineerType
         })
       });
       const data = await response.json();
@@ -119,7 +125,12 @@ export default function Container() {
         {
           tasks.map((q, i) => (
             <li key={q.id}>
-              <div>{q.description} ({q.author})</div>
+              <div>
+                  {' ' + q.description} 
+                  {' ' + q.author}
+                  {' ' + q.priorityLevel}
+                  {' ' + q.engineerType}
+                </div>
               <button onClick={() => editTask(q.id)}>Edit</button>
               <button onClick={() => deleteTask(q.id)}>Delete</button>
             </li>
@@ -137,12 +148,3 @@ export default function Container() {
   )
 }
 
-/*
-        <div>
-            <p> Author: </p>
-            <p> Description </p>
-            <p> Priority Level </p>
-            <p> Engineer Type </p>
-            <p> Date Posted </p>
-        </div>
-*/

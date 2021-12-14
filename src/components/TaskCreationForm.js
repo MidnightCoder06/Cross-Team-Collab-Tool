@@ -4,6 +4,8 @@ const initialFormState = {
   id: '',
   author: '',
   description: '',
+  priorityLevel: '',
+  engineerType: ''
 }
 
 export default function TaskCreationForm(props) {
@@ -40,6 +42,18 @@ export default function TaskCreationForm(props) {
         let currState = {...values}
         currState.author = evt.target.value
         setValues(currState)
+    } 
+
+    else if (evt.target.name === 'priorityLevel') {
+        let currState = {...values}
+        currState.priorityLevel = evt.target.value 
+        setValues(currState)
+    }
+
+    else if (evt.target.name === 'engineerType') {
+        let currState = {...values}
+        currState.engineerType = evt.target.value 
+        setValues(currState)
     }
   }
 
@@ -64,6 +78,20 @@ export default function TaskCreationForm(props) {
         value={values.author}
         onChange={onChange}
         placeholder='Enter author'
+      />
+      <input
+        name='priorityLevel'
+        type='description'
+        value={values.priorityLevel}
+        onChange={onChange}
+        placeholder='Enter priority level'
+      />
+      <input
+        name='engineerType'
+        type='description'
+        value={values.engineerType}
+        onChange={onChange}
+        placeholder='Enter engineer type'
       />
       <button id='submitBtn' disabled={isDisabled()}>
         Submit {values.id ? 'Changes' : 'Task'}
