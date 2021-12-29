@@ -1,6 +1,6 @@
 import '../styles/Navbar.css'
 import '../styles/SameLineDivs.css'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 /* create dropdown menu next
     https://www.youtube.com/watch?v=IF6k0uZuypA&t=110s
@@ -13,18 +13,18 @@ Also look up videos on how to make a fancy navbar
 */
 
 const Navbar = () => {
-    const history = useHistory();
+    const navigate = useNavigate(); 
 
     const handlePurposeStatementClick = () => {
-        history.push('./purpose-statement');
+        navigate('./purpose-statement');
     }
 
     const handleCreateTaskClick = () => {
-        history.push('/task-creation-container');
+        navigate('/task-creation-container');
     }
 
     const handleFileBugClick = () => {
-        history.push('/bug-report-form');
+        navigate('/bug-report-form');
     }
 
     return (

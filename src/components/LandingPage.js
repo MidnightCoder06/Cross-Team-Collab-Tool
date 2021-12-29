@@ -6,6 +6,7 @@ import '../styles/LandingPage.css';
 // paginated -> news feed style 
 // map over an array of objects ... feed the key / values as props into task post
 const LandingPage = () => {
+    console.log('hello')
     return (
         <div className="LandingPage-wrapper">
             <Navbar />

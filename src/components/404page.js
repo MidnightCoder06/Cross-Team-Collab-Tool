@@ -1,7 +1,7 @@
 // TODO: find a cool, public 404 image to render here 
 import React from 'react';
 
-const notFoundPage = () => {
+const NotFoundPage = () => {
     return (
         <>
             <img src="xyz" alt="" />
@@ -10,4 +10,4 @@ const notFoundPage = () => {
     );
 }
 
-export default notFoundPage;
+export default NotFoundPage;
