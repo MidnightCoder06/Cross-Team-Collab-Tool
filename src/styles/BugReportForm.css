@@ -1,0 +1,13 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title {
+    margin: 50px;
+}
+
+.form-submit {
+    margin-top: 10px;
+}

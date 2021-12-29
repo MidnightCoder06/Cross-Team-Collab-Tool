@@ -1,10 +1,10 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-//import TaskPost from './TaskPost';
+//import TaskPost from './TaskPost'; // TODO: actually show all the posts
 import '../styles/LandingPage.css';
 
-// paginated -> news feed style 
-// map over an array of objects ... feed the key / values as props into task post
+// TODO: map over an array of tasks pulled from backend ... feed the key / values as props into task post
+// TODO: paginated -> news feed style 
 const LandingPage = () => {
     console.log('hello')
     return (

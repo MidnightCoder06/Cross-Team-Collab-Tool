@@ -2,15 +2,17 @@ import '../styles/Navbar.css'
 import '../styles/SameLineDivs.css'
 import { useNavigate } from 'react-router-dom';
 
-/* create dropdown menu next
+/* TODO: create a cool dropdown menu 
     https://www.youtube.com/watch?v=IF6k0uZuypA&t=110s
     https://www.youtube.com/watch?v=mN3P_rv8ad4
     https://www.youtube.com/watch?v=t8JK5bVoVBw
 */
 
-/*
-Also look up videos on how to make a fancy navbar 
-*/
+
+// TODO: Also look up videos on how to make a fancy navbar 
+
+// TODO: actually be able to sort 
+
 
 const Navbar = () => {
     const navigate = useNavigate(); 

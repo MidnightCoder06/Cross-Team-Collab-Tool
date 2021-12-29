@@ -3,7 +3,7 @@ import LandingPage from './components/LandingPage';
 import PurposeStatement from './components/PurposeStatement';
 import TaskCreationContainer from './components/TaskCreationContainer';
 import BugReportForm from './components/BugReportForm';
-import NotFoundPage from './components/404page';
+import NotFoundPage from './pages/404page';
 
 
 /* using v6 of react router
